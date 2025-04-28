@@ -1,0 +1,110 @@
+/* قاعدة عامة: تحسين عرض النصوص والصور للشاشات الصغيرة */
+@media (max-width: 768px) {
+    /* ضبط الحاوية */
+    .container {
+        width: 95%;
+    }
+
+    /* رأس الصفحة */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    /* نموذج تسجيل الدخول والتسجيل */
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    /* صفحة الملف الشخصي */
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-details {
+        margin-top: 1rem;
+    }
+
+    /* صفحة المحادثات */
+    .chat-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contacts-list {
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+
+    .chat-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .chat-messages {
+        height: 300px;
+    }
+}
+
+/* للشاشات الصغيرة جدًا: أقل من 480 بكسل */
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        align-items: center;
+    }
+
+    .chat-header {
+        font-size: 1rem;
+    }
+
+    .chat-input input {
+        font-size: 0.9rem;
+    }
+
+    .chat-input button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .profile-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .form-group input {
+        font-size: 0.9rem;
+    }
+
+    .primary-btn, .secondary-btn, .danger-btn {
+        font-size: 0.9rem;
+    }
+}
