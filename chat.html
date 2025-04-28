@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Chat - المحادثات</title>
+
+    <!-- ربط ملفات CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- أيقونة تبويب المتصفح -->
+    <link rel="icon" href="assets/icons/chat-icon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <h1 class="logo">You Chat</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="chat.html" class="active">المحادثات</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي للمحادثات -->
+    <main>
+        <div class="container chat-container">
+
+            <!-- قائمة الأصدقاء -->
+            <aside class="contacts-list">
+                <h2>جهات الاتصال</h2>
+                <ul>
+                    <li class="contact active" onclick="selectContact('أحمد')">أحمد</li>
+                    <li class="contact" onclick="selectContact('سارة')">سارة</li>
+                    <li class="contact" onclick="selectContact('محمد')">محمد</li>
+                    <li class="contact" onclick="selectContact('ليلى')">ليلى</li>
+                </ul>
+            </aside>
+
+            <!-- نافذة المحادثة -->
+            <section class="chat-box">
+                <div class="chat-header">
+                    <h2 id="chat-with">اختر جهة اتصال لبدء المحادثة</h2>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">
+                    <!-- الرسائل ستظهر هنا -->
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()">إرسال</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 You Chat. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- ربط ملفات JavaScript -->
+    <script src="js/chat.js"></script>
+
+</body>
+</html>
