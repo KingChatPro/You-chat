@@ -1,0 +1,294 @@
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* الرأس */
+header {
+    background-color: #4A90E2;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #357ABD;
+}
+
+/* الحاوية العامة */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* القسم الرئيسي */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #4A90E2;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* صفحة تسجيل الدخول وإنشاء الحساب */
+.form-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4A90E2;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.primary-btn {
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #357ABD;
+}
+
+.secondary-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #bbb;
+}
+
+.danger-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.danger-btn:hover {
+    background-color: #c0392b;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-footer a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+/* صفحة المحادثات */
+.chat-container {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-list {
+    width: 30%;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    overflow-y: auto;
+    height: 500px;
+    border-left: 1px solid #ccc;
+}
+
+.contacts-list h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contacts-list ul {
+    list-style: none;
+}
+
+.contact {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact:hover,
+.contact.active {
+    background-color: #e1eaff;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.chat-header {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    margin-right: 10px;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #357ABD;
+}
+
+/* صفحة الملف الشخصي */
+.profile-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-photo {
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-photo input {
+    display: block;
+    margin-top: 10px;
+}
+
+.profile-details p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.profile-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+/* مخصصات إضافية */
+.hidden {
+    display: none;
+}
