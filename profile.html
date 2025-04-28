@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Chat - الملف الشخصي</title>
+
+    <!-- ربط ملفات CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- أيقونة التبويب -->
+    <link rel="icon" href="assets/icons/chat-icon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <h1 class="logo">You Chat</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="chat.html">المحادثات</a></li>
+                    <li><a href="profile.html" class="active">الملف الشخصي</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي: عرض الملف الشخصي -->
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <h2>الملف الشخصي</h2>
+
+                <div class="profile-info">
+                    <div class="profile-photo">
+                        <img src="assets/images/default-profile.png" alt="صورة الملف الشخصي" id="profile-image">
+                        <input type="file" id="upload-photo" accept="image/*" onchange="updateProfileImage(event)">
+                    </div>
+
+                    <div class="profile-details">
+                        <p><strong>اسم المستخدم:</strong> <span id="username">اسم المستخدم</span></p>
+                        <p><strong>البريد الإلكتروني:</strong> <span id="email">user@example.com</span></p>
+
+                        <div class="profile-actions">
+                            <button class="btn secondary-btn" onclick="editProfile()">تعديل المعلومات</button>
+                            <button class="btn danger-btn" onclick="logout()">تسجيل الخروج</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج تعديل المعلومات (مخفي في البداية) -->
+                <form id="edit-profile-form" style="display: none;" onsubmit="return saveProfileChanges(event)">
+                    <div class="form-group">
+                        <label for="edit-username">اسم المستخدم الجديد:</label>
+                        <input type="text" id="edit-username" name="edit-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-email">البريد الإلكتروني الجديد:</label>
+                        <input type="email" id="edit-email" name="edit-email" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn primary-btn">حفظ التغييرات</button>
+                        <button type="button" class="btn secondary-btn" onclick="cancelEdit()">إلغاء</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 You Chat. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- ربط ملفات JavaScript -->
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
